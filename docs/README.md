@@ -15,11 +15,11 @@
 
 | 切片 | 文件 | 证据 | 状态 |
 | --- | --- | --- | --- |
-| 盘点 | [phase-01-asset-inventory.md](./phase-01-asset-inventory.md) | 全源扫描 | 冻结作附录 |
-| 01 Button | [specs/01-button.md](./specs/01-button.md) | APP Button / ButtonGroup / PageFooter 实例 | [Figma 规范页](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=62-14) |
+| 00 字体与颜色 | [specs/00-type-and-color.md](./specs/00-type-and-color.md) | APP 文本样式 + APP 色 token | [Figma](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=65-16) |
+| 01 Button | [specs/01-button.md](./specs/01-button.md) | APP Button / ButtonGroup / PageFooter | [Figma](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=62-14) |
 
 ## 接下来
 
-02 Selector → 03 Input → 04 Upload → 05 吸底栏 / Dialog / Bottom Sheet → 06 查查工具页（与申请内选择器分开）
+盘点附录：[phase-01-asset-inventory.md](./phase-01-asset-inventory.md)
 
-Kitchen 壳（StatusBar、返回、Mask、Toast）只复用，不重做。
+02 Selector → 03 信息确认 → 04 Icon → 05 Input / Upload → 06 吸底栏 / Dialog / Bottom Sheet
