@@ -16,6 +16,9 @@
 | 理赔工具1 | `45tHI9BSIUOQbLGxyiPGP7` | `页面 1` `0:1` | 住院医疗险手册、30秒体验理赔 |
 | 【视觉】药品查查250904 | `gPJrHdAClQUImOyr48Fdh3` | `新` `0:1`、`控件` | 药品查查清单，图层名大量错写成医院查查 |
 | 【视觉】医院查查优化250723 | `CAv6EsMXlX6ZFoIpg4B80Z` | `视觉` `0:1`、`控件` | 医院查查清单 + 部分位图/溢出稿 |
+| Kitchen 官网 | https://kitchen.alipay.com/ | Sketch 插件下载站 | **能打开，但不是规范正文** |
+| Alipay Design 站 | https://design.alipay.com/ | 品牌站 SPA | 能打开，无公开 Token 表 |
+| Dapollo | https://dapollo.alipay.com/ | 与 Kitchen 同源前端 | 未登录拿不到库 |
 
 此前误把 Figma 文件 `skill`（`ZXibIc4lflyHRoTF7OQV0L`）当作 Sketch 导入；**在你确认前不再使用该文件。**
 
@@ -48,7 +51,7 @@
 7. **产品按钮的第一份 L1 Exact 来自这份 Sketch，不是 Figma 截图。** 吸底「暂存 / 提交申请」是原生 group `按钮/蓝色/可操作`。
 8. **你发的四份 Figma 都按理赔工具稿盘。** 药品/医院查查是原生图层最多的视觉源；理赔工具1/2 里教育手册、体验理赔、晒图可作场景，大量 `位图` 只当 L3。
 9. **错误稿已丢弃，不当规范：** 药品查查「使用条件和流程」空壳 Sheet；医院查查「特定疾病列表」文字溢出重复；图层名 `医院查查2备份` 出现在药品查查文件里；文本 `**成` 等截断。以画面文案为准。
-10. **截图只对照、不量 Token。** 已装 `figma-design-extract` / `design-fidelity-verify` / `visual-qa` / `claims-visual-guard`。`https://dapollo.alipay.com/` 当前是 Kitchen 插件站，未登录拿不到内部 Token 表；Kitchen 外来 Symbol 继续当支付宝基础件，不写进理赔 DS。
+10. **Kitchen 官网能打开，规范库打不开。** `https://kitchen.alipay.com/` 是 Sketch 插件下载 SPA。支付宝基础 / 数字金融组件要在 Mac Sketch 登录 Kitchen 后才能整库消费。本环境是 Linux Cloud Agent，装不了 Sketch 插件。已经能用的是理赔稿里嵌进来的 Kitchen Symbol。Figma 账号下还能搜到 WorldFirst / Antom / 信用卡 / AlipayHK 等库，**那些不是支付宝理赔规范，不用。**
 
 ---
 
@@ -197,6 +200,38 @@ Figma `skill`（`ZXibIc4lflyHRoTF7OQV0L`）先不作为理赔历史源。车险�
 - `浮层-发放详情`：Sheet 结构候选。
 
 Published components 几乎全是 Kitchen 导航/蒙层/关闭/Home Indicator，不是理赔表单件。
+
+### 1.7 Kitchen / 支付宝基础 / 数字金融 — 能打开什么
+
+站点探测（2026-08-18，Cloud Agent，无蚂蚁 SSO）：
+
+| URL | 结果 |
+| --- | --- |
+| https://kitchen.alipay.com/ | 200，标题「Kitchen Sketch 插件官方网站」。前端 SPA，路由只有 `/` `/changelog` `/beta` `/exception`。**没有**公开的组件/Token 目录。 |
+| https://dapollo.alipay.com/ | 与 Kitchen 同源包，同样是插件站。 |
+| https://design.alipay.com/ | 200，Alipay Design 品牌页，无 Token 表。 |
+| 语雀 kitchen / alipaydesign | 请求超时，需登录。 |
+
+Kitchen 本身是 Sketch 插件，用来拉取团队库。理赔稿已经引用的两套库：
+
+| Kitchen 库 | 在已上传 Sketch 里出现的 Symbol | 理赔 DS 怎么用 |
+| --- | --- | --- |
+| `Alipay Design_支付宝基础/组件` | `反馈:60/背景蒙层Mask/产品弹窗蒙层`；`反馈:60/轻提示Toast/纯文字` | **复用基础件**，不重做 Overlay / Toast |
+| `Kitchen-alipay-design-component` | `@导航/状态栏StatusBar/白色字`；`@导航栏/返回按钮/白色` | **复用导航壳**；理赔蓝头 Nav 仍要单独记 |
+| `MphOkFXyOO7T_AlipayComponent@2x` | `Home-Indicator/颜色:#黑色` | 系统壳，P2 |
+| `Alipay Design_支付宝数字金融设计组件/组件` | `图标/保险公司LOGO/人保/白色` | 保司 Logo，Page-specific |
+
+Figma 理赔文件里同名 Instance 也反复出现（TopBar、Overlay、关闭、Toast）。这就是「和支付宝相通」的那一层：**壳和反馈走基础/数字金融，表单/上传/查查走理赔业务。**
+
+本账号 Figma `search_design_system` 还能搜到：🌍 Token List / Buttons（WorldFirst）、Antom、ASAP、信用卡基础组件、AlipayHK、飓创。**不要当支付宝理赔 Kitchen 库用。** `#1677FF` 在飓创 Primitive 里叫 `status/link`，与理赔按钮蓝一致，只作旁证，Token 名仍以理赔稿为准。
+
+要把基础/数字金融**整库**量出来，需要你任选一种：
+
+1. 从 Sketch Kitchen 把「支付宝基础」「数字金融」库另存为 `.sketch` 拖进对话；或
+2. 若已迁到 Figma，发这两个库的 Figma 链接；或
+3. 语雀/Dapollo 规范页登录后把链接或导出给我。
+
+没有整库之前：相通组件只记「引用 Kitchen，不重做」；理赔特有组件继续用业务稿 L1。
 
 **还需要你发的 Sketch（下列标签对应的源文件）：** 优先拖 `.sketch` 进对话（当文件，不要截成图）；多个可以打成一个 zip。GitHub 单文件建议 < 50MB。
 
@@ -600,7 +635,8 @@ Record Card、Timeline、Toast、Calendar 完整态、安心赔 Badge、门户�
 ## 9. 本阶段明确不写进正式 Token 的东西
 
 - 任何从截图估的 px / HEX / 字号 / 圆角（Sketch JSON / Figma 可读图层除外，且须标明 2x）
-- Ant Design / Material 默认值；Dapollo/Kitchen 未登录页面上的通用值
+- Ant Design / Material 默认值；Kitchen 未登录首页上的营销文案
+- WorldFirst 🌍 库、Antom、ASAP、信用卡、AlipayHK、飓创 —— 同账号能搜到，**不是支付宝理赔 Kitchen 库**
 - 乱码、截断、文字溢出、空壳占位帧
 - 图层名与画面不符时的图层名（例如药品查查文件里的 `医院查查2备份`）
 - Switch、协议 Checkbox、Upload Loading 等未见控件

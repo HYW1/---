@@ -21,6 +21,9 @@ description: Guardrails for measuring 理赔工具 visuals. Use when extracting 
 4. **整屏位图**：名为 `位图` 的 Rectangle。只做 L3 视觉识别。
 5. **标注条 Button**：宽几千 px 的流程标注，不是产品按钮。
 
+6. **别的蚂蚁设计库**：WorldFirst 🌍、Antom、信用卡、AlipayHK、飓创。同账号能搜到，不是本业务规范。
+7. **Kitchen 官网下载页**：没有组件尺寸表。
+
 ## 证据等级
 
 | 来源 | 等级 |
