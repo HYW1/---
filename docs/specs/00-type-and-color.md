@@ -45,7 +45,7 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 | 26 | Regular | #0091FF | 处理中状态标签（申请中 / 审核中 / 已结案） |
 | 24 | Regular | #999999 | 时间 / 辅助说明 / 占位 |
 | 24 | Regular | #1677FF | 选中 chip / 医院名 |
-| 20 | Regular | #FF3B30 | 标签 / 状态小字 |
+| 22 | Regular | #FF3B30 | 标签 / 状态小字（保障中） |
 | 32 | Bold · Alibaba Sans | #FF3B30 | 序号 / 步骤数字 |
 | 28 | Bold · Alibaba Sans | #FF3B30 | 金额 |
 
