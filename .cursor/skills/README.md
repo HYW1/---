@@ -21,4 +21,8 @@ MIT: `LICENSE.figma-design-skills.txt`.
 
 ## Project
 
+- `alipay-app-design-system`：**默认 Figma / UX 规范。** Token、组件 key、750 画布、历史稿体验模式。禁止手绘 TopBar / 主按钮。
+- `c-end-visual-craft`：C 端视觉质感。不重造组件；只做氛围 / 主视觉 / 去 AI 感。
 - `claims-visual-guard`: 理赔工具稿护栏。乱码、空壳、图层名错误一律丢弃。
+
+出 Figma 稿时顺序：`alipay-app-design-system` → `figma-use` / `figma-generate-library` → 需要质感时再开 `c-end-visual-craft`。
