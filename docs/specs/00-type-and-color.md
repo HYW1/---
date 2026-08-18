@@ -5,6 +5,22 @@
 Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2  
 页面：`---视觉规范---`（`20:1012`）· 画板 `字体与颜色`（`75:2`）
 
+## Font usage
+
+中文主体用 PingFang SC（苹方），金融数字用 Alibaba Sans 102 Ver2。字重按场景选，不要混用字体家族。
+
+### PingFang SC（苹方）
+
+- 字重：Regular / Semibold / Medium
+- 场景：中文主体字体。Regular 正文说明，Semibold 标题与强调（历史稿高频字重），Medium 大标题与状态标题
+- 不用：金额数字不要用苹方
+
+### Alibaba Sans 102 Ver2
+
+- 字重：Bold（历史稿）/ Medium（基础库）
+- 场景：金额、序号、赔付比例、获赔金额等金融数字
+- 不用：中文标题不要用此字体
+
 ## Type
 
 中文 PingFang SC，字重 Regular / Semibold / Medium。金额与序号用 Alibaba Sans 102 Ver2 Bold。
