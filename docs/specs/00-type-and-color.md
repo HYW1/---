@@ -23,8 +23,15 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 金融数字字体。支付宝系金额 / 数字强调专用。
 
 - Bold · 金额 / 序号 / 赔付比例 / 获赔金额（历史稿用 Bold，28 / 32 / 36）
+- Regular · 序号 / 步骤数字（32）
 - Medium · 基础库默认字重（字号 ≥ 28 的数字强调，如红包 / 折扣 / 额度）
 - 不用 · 中文标题 / 正文不要用此字体
+
+### 状态栏时间字体
+
+- Inter Regular / SF Pro Semibold · 状态栏时间 9:41
+- Bold · 状态栏强调（Inter Bold）
+- 不用 · 理赔正文与金额不用此字体，属系统壳
 
 ### 蚂蚁保品牌字体
 
