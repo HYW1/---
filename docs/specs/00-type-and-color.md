@@ -19,12 +19,14 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 | 36 | Semibold | #333333 | 一级模块卡标题 |
 | 32 | Semibold | #333333 | 二级标题 / 列表主文案 |
 | 30 | Regular | #333333 | 正文 / 说明 |
-| 28 | Semibold | #333333 | 按钮 / 卡片标题 / 强调 |
+| 28 | Semibold | #333333 | 主按钮文字（蓝底反白实际 #FFFFFF）/ 卡片标题 / 强调 |
 | 28 | Regular | #333333 | 正文 / 列表主文案 |
+| 28 | Regular | #0080FF | 链接 / 查看详情 / 查看全部 / 了解更多 |
 | 26 | Regular | #333333 | 正文主力 / 列表次行 / 说明 |
 | 26 | Semibold | #333333 | 列表主文案强调 / 标签 |
+| 26 | Regular | #1677FF | 主操作文字 / 去申请 / 去查看 |
 | 24 | Regular | #999999 | 时间 / 辅助说明 / 占位 |
-| 22 | Regular | #1677FF | 链接 / 次级动作 |
+| 24 | Regular | #1677FF | 选中 chip / 医院名 |
 | 20 | Regular | #FF3B30 | 标签 / 状态小字 |
 | 32 | Bold · Alibaba Sans | #FF3B30 | 序号 / 步骤数字 |
 | 28 | Bold · Alibaba Sans | #FF3B30 | 金额 |
