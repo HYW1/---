@@ -12,7 +12,14 @@
 | 理赔侧设计规范 | `NiXwro23h7CvvWT7GOb1ep` | `理赔业务流程` `19:880` | 最新业务流程稿 |
 | skill（Sketch 导入） | `ZXibIc4lflyHRoTF7OQV0L` | `历史稿` `0:1` | 理赔全链路历史稿，大量图片 |
 
-原始 Sketch 文件未直接解析。本次以用户提供的 Figma 导入文件作为替代源。导入后 **Symbol 几乎全部丢失**，全链路大量是截图。
+原始 Sketch 文件未进入本次范围。此前误把 Figma 文件 `skill`（`ZXibIc4lflyHRoTF7OQV0L`）当作 Sketch 导入；**在你确认前不再使用该文件。**
+
+范围已确认：
+
+- 申请步骤 1/2/3 截图 = 当前主视觉
+- 理赔有两种申请方式：向导协助申请 / 自助申请
+- **车险暂不纳入**
+- 无法提取的组件接受人工复刻；组件截图见 `docs/phase-01-component-crops/`
 
 ## 证据等级
 
