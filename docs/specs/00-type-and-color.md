@@ -95,7 +95,6 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 |---|---|
 | #FFFFFF | 卡片 / 弹窗 / 底栏白底 |
 | #F5F5F5 | 次级背景 |
-| #EEEEEE | 分割 / 次级底 |
 | #FAFAFA | 辅助底 |
 | #F0F3F7 | 页面背景 |
 | #F9F9F9 | 辅助底 |
@@ -107,6 +106,7 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 | 色值 | 用途 |
 |---|---|
 | #E5E7EB | 卡片描边（最高频） |
+| #EEEEEE | 分割线（Line 750×1 / Rectangle 638×1） |
 | #E8EDF3 | 次级描边 |
 | #000000 @8% | 细分割线 |
 | #000000 @6% | 极细分割线 |
