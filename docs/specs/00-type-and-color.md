@@ -33,7 +33,7 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 
 ## Color
 
-按使用场景分组，已剔除查查工具蓝（#40B0F8 / #0080FF / #00AAFF 等）和出现极少的中性变体。
+按使用场景分组。#1677FF 为理赔主操作蓝，#0080FF 为理赔链接蓝。查查工具 Tag 蓝 #40B0F8 不属于本规范，已剔除。
 
 ### 文字灰阶
 
