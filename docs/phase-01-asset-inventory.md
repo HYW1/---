@@ -1,6 +1,7 @@
 # 理赔业务 Design System — Phase 01 资产盘点
 
-> 本阶段只做盘点，不创建规范页、不创建组件、不修改任何现有设计。
+> 盘点正文冻结为附录。第一份可审规范见 [specs/01-button.md](./specs/01-button.md)，目录见 [README.md](./README.md)。
+> 仍不创建 Figma 规范页 / 组件，不修改任何现有设计。
 > 无法从 Figma 原生结构直接读取的参数一律标为 **Visual Estimate / 待人工确认**，不写成精确 Token。
 
 ## 扫描范围
@@ -665,6 +666,7 @@ Record Card、Timeline、Toast、Calendar 完整态、安心赔 Badge、门户�
 5. 不见过程态就写「未见」，不补 Loading/Error 假数据。
 6. 乱码 / 空壳 / 错误图层名丢弃，不以视觉模型从截图量 Token。
 7. 药品查查与医院查查是工具页，申请内 Selector 是另一场景。
+8. Kitchen 官网不是规范正文；基础/数字金融只复用已嵌进理赔稿的 Symbol，不从 WorldFirst 等其它库借 Token。
 
 ---
 
@@ -679,5 +681,8 @@ Record Card、Timeline、Toast、Calendar 完整态、安心赔 Badge、门户�
 5. 其余本地 Sketch 请继续拖进对话（当文件，不要截成图）。Figma 授权不能代替读你磁盘。
 6. `#1677FF`（申请按钮）与 `#40B0F8`（查查 Tag）是否就是两套蓝。
 7. 药品/医院「查查」是进同一套 DS，还是只给申请 Selector 当参考。
+8. Kitchen「支付宝基础 / 数字金融」是否同意：壳和反馈直接复用，不写进理赔组件库；要把整库量出来请另存 `.sketch` 或发 Figma 库链接。
 
-确认后才开始 Phase 02 Foundation。本阶段到此停止。
+Foundation Token 页和 Figma 组件仍等你点头。规范正文已按切片开写，不卡在上述问题全部答完。
+
+已产出：[specs/01-button.md](./specs/01-button.md)。
