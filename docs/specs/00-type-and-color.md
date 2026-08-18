@@ -26,6 +26,28 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 - Medium · 基础库默认字重（字号 ≥ 28 的数字强调，如红包 / 折扣 / 额度）
 - 不用 · 中文标题 / 正文不要用此字体
 
+### 蚂蚁保品牌字体
+
+品牌 slogan / 营销标题专用。非正文与列表字体。
+
+设计原则：
+- 内方外圆 — 科技内核 / 包容守护
+- 36° 向阳 — 积极温暖
+- 科技链接 — 连接保险与用户
+- 1/6 圆角 — 标准化生产
+
+字重 / 样式：
+- 通用 — 品牌 slogan、核心信息
+- 加粗 — 高级标题、强调
+- 倾斜 6° — 辅助场景
+
+字距：1/6 字宽（可按字形微调）
+
+实操参数：
+- 倒圆角：8px / 4px / 1px，内角不倒角
+- 描边：加粗 1，居中
+- 倾斜：6°
+
 ## Type
 
 中文 PingFang SC，字重 Regular / Semibold / Medium。金额与序号用 Alibaba Sans 102 Ver2 Bold。
@@ -55,8 +77,6 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 | 28 | Bold · Alibaba Sans | #FF3B30 | 金额 |
 
 ## Color
-
-按历史稿实际使用场景分类。查查工具色（#40B0F8 Tag、#934300 医院评级）已剔除。
 
 ### 文字灰阶
 
