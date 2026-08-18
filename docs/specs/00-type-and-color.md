@@ -169,7 +169,8 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 
 ## Radius & Spacing
 
-Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=90-882
+独立画板：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=90-882  
+页面：`---视觉规范---`（`20:1012`）· 画板 `圆角与间距`（`90:882`）
 
 ### 圆角
 
