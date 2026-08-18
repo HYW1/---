@@ -10,9 +10,12 @@
 | 理赔侧设计规范 | `NiXwro23h7CvvWT7GOb1ep` | `封面` `37:523` | 封面，无业务组件 |
 | 理赔侧设计规范 | `NiXwro23h7CvvWT7GOb1ep` | `历史稿` `0:1` | 历史设计 + 部分可编辑稿 |
 | 理赔侧设计规范 | `NiXwro23h7CvvWT7GOb1ep` | `理赔业务流程` `19:880` | 最新业务流程稿 |
-| skill（Sketch 导入） | `ZXibIc4lflyHRoTF7OQV0L` | `历史稿` `0:1` | 理赔全链路历史稿，大量图片 |
+| skill（Sketch 导入） | `ZXibIc4lflyHRoTF7OQV0L` | `历史稿` `0:1` | **暂停使用**，待你确认 |
+| 本地 Sketch（ZIP 解析） | 对话上传 `…250905…sketch` | `页面 1` + `控件` | 信息填写 + 多责任赔付，**原生图层可读** |
 
-原始 Sketch 文件未进入本次范围。此前误把 Figma 文件 `skill`（`ZXibIc4lflyHRoTF7OQV0L`）当作 Sketch 导入；**在你确认前不再使用该文件。**
+此前误把 Figma 文件 `skill`（`ZXibIc4lflyHRoTF7OQV0L`）当作 Sketch 导入；**在你确认前不再使用该文件。**
+
+本地 Sketch **可以换方法读**：把 `.sketch` 当 ZIP 解出 `pages/*.json`，图层尺寸 / 填充 / 字体是 L1 Exact。Figma 授权 **读不到** 你电脑上的 Sketch；本环境是 Cloud Agent，看不到 Mac 磁盘。
 
 范围已确认：
 
@@ -25,7 +28,7 @@
 
 | Level | 含义 | 本阶段用法 |
 | --- | --- | --- |
-| L1 Exact | Figma Component / Instance / Variable / Style / 可读取图层 | 可进入后续正式 Token |
+| L1 Exact | Figma Component / Instance / Variable / Style / 可读取图层；**或 Sketch 原生 JSON 图层**（2x 画布需 ÷2 才是 pt） | 可进入后续正式 Token |
 | L2 Repeated Pattern | 多个页面重复出现的稳定结构 | 可进入后续正式规范，尺寸仍需复核 |
 | L3 Visual Recognition | 图片 / Screenshot / Flattened UI 视觉识别 | **必须人工确认后才能进 Token** |
 | L4 Recommendation | 项目中没有明确规范 | 本阶段不给建议值 |
@@ -34,9 +37,11 @@
 
 1. **本项目几乎没有“理赔业务自己的 Figma 组件库”。** 理赔侧文件 published components = 0。现有 Instance 主要来自外部库（导航、遮罩、关闭按钮、标注条），不是理赔表单/上传/选择器。
 2. **最新业务流程稿的申请主链路，大部分是整屏截图。** `申请步骤1/2/3`、`选择申请方式`、`签名协议`、`理赔记录` 等都是 named Frame 包一层 `image xx`。视觉上能识别组件，但 **不能假装已经提取成功**。
-3. **Sketch 导入文件是最大的历史组件来源，也是最大的图片库。** 至少 **121 张全屏截图**，覆盖门户、进度、审核结论、拒赔原因、向导申请、补材、确认、签名。
-4. **可直接复用的原生结构集中在「疾病查查 / 就诊医院」选择器链路。** 这里有 `BottomSheet`、`SearchBar`、`HotSearchPillsGrid`、`SelectionConfirmPanel` 等 named Frame，属于隐性组件，不是 Component Set。
-5. **画布上的 `操作/按钮 Button` Instance 多数是流程标注条，不是产品按钮。** 宽 3000–12000px、高 128px。不要把它当成 Primary Button 规范源。
+3. **Figma 里的「Sketch 导入」先停用。** 真正的本地 `.sketch` 要用 ZIP 解析，不要走 Figma 导入（导入后 Symbol 丢失、变整屏图）。
+4. **已成功解析的这一份 Sketch 不是全链路。** 只有「信息填写备份 117–129」和「多责任赔付-2条/7条」，外加 1 个线框胶囊按钮 Symbol。门户 / 进度 / 拒赔 / 签名等历史稿仍在你本地其他 Sketch 里，**这份读不到。**
+5. **可直接复用的 Figma 原生结构集中在「疾病查查 / 就诊医院」选择器链路。** 这里有 `BottomSheet`、`SearchBar`、`HotSearchPillsGrid`、`SelectionConfirmPanel` 等 named Frame，属于隐性组件，不是 Component Set。
+6. **画布上的 `操作/按钮 Button` Instance 多数是流程标注条，不是产品按钮。** 宽 3000–12000px、高 128px。不要把它当成 Primary Button 规范源。
+7. **产品按钮的第一份 L1 Exact 来自这份 Sketch，不是 Figma 截图。** 吸底「暂存 / 提交申请」是原生 group `按钮/蓝色/可操作`。
 
 ---
 
@@ -88,9 +93,43 @@
 | 老带新分享页 / 分享浮层 / 分享到微信 / 分享口令 | `22:4199` 等 | Image | 是 |
 | 就诊医院 / 甲状腺癌浮层 / 疾病查查 | 与历史稿重复 | Implicit | 否 |
 
-### 1.4 Sketch 导入 / 历史稿 `0:1`
+### 1.4 未确认文件（暂停使用）
 
-画布用文字标签组织全链路，屏幕本身多为图片。标签即业务地图，本阶段只记录，不画流程大图。
+Figma `skill`（`ZXibIc4lflyHRoTF7OQV0L`）先不作为理赔历史源。车险相关屏幕先不纳入。下面这张业务地图仍有效，但证据应改从**本地 Sketch ZIP**补，不要从该 Figma 文件读。
+
+### 1.5 本地 Sketch（ZIP 解析）— 已读通一份
+
+读取方式：`.sketch` = ZIP，解出 `document.json` + `pages/*.json`。这比 Figma 导入更准，能拿图层宽高、填充 HEX、字体、圆角。
+
+已读文件：对话上传 `________-____250905_1__3__2dea.sketch`（Sketch 2025.2，约 5.8MB）。预览：`docs/phase-01-component-crops/sketch-preview-info-fill.png`。
+
+**这份覆盖什么**
+
+| 画板（750 宽，2x 画布） | 类型 | 备注 |
+| --- | --- | --- |
+| `信息填写备份 117–129`（13 个） | Native Group | 上传材料卡 + 吸底按钮 + 不合理费用说明浮层 |
+| `多责任赔付-2条` 备份 ×4、`多责任赔付-7条备份 10` | Native Group | 赔付明细，不是申请三步主链路 |
+| `控件` 页 Symbol | Native symbolMaster | 仅 1 个：胶囊线框按钮 24px |
+
+**这份不覆盖什么：** 门户、选择申请方式、申请步骤 1/2、签名、理赔记录、拒赔矩阵、进度时间轴。那些还在你本地其他 Sketch 里。
+
+**Sketch L1 Exact（2x 画布；1x pt = 数值 ÷ 2）**
+
+| 组件 | Sketch 图层 | 2x | 1x pt | 填充 / 描边 / 字 | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| Primary Button | `按钮/蓝色/可操作` + Background | 339×98，圆角 49 | 169.5×49，胶囊 | `#1677FF`；字「提交申请」PingFang SC Regular 36 / `#FFFFFF` | L1 Sketch |
+| Secondary Button | 同上，白底 | 339×98，圆角 49 | 169.5×49，胶囊 | `#FFFFFF` + 描边 `#E5E5E5` 2px；字「暂存」PingFang SC Regular 36 / `#333333` | L1 Sketch |
+| 吸底组合 | `信息输入:50/按钮Button:2/吸底组合/状态:#默认状态` | 750×263 | 375×131.5 | 白底；含「取消申请」PingFang SC Regular 26 / `#1677FF` | L1 Sketch |
+| Outline Capsule | Symbol `胶囊按钮(线框) 24px` | 144×49，圆角 8 | 72×24.5，圆角 4 | 描边 `#1677FF` 2px；字「主要操作」PingFang SC Regular 24 / `#1677FF` | L1 Sketch |
+| Outline Capsule 实例 | 信息填写页「一键导入」 | 192×49 | 96×24.5 | 同上结构，宽被拉开 | L1 Sketch |
+| 材料卡 | `编组 4备份` 等 | 宽 702 | 351 | 白底；标题 PingFang SC Semibold 32 / `#333333`；「必须提供」；「材料示例」24 / `#1677FF` | L1 Sketch |
+| 页面底 | `信息填写备份 117` | 750 宽 | 375 | 页背景 `#F5F5F5` | L1 Sketch |
+
+高频字色（这份 Sketch 文本直方图，不是完整 Token 表）：`#333333`、`#999999`、`#1677FF`、`#FFFFFF`、`#FF6430`。字体：PingFang SC Regular / Medium / Semibold；数字 DINPro-Medium / Alibaba Sans。
+
+外来 Symbol（Kitchen / Alipay）：Toast、Mask、StatusBar、返回按钮、人保 logo、Home Indicator。这些是支付宝基础件，不是理赔自建组件。
+
+**还需要你发的 Sketch（下列标签对应的源文件）：** 优先拖 `.sketch` 进对话（当文件，不要截成图）；多个可以打成一个 zip。GitHub 单文件建议 < 50MB。
 
 **门户**
 
@@ -311,18 +350,17 @@ Variables：对页面节点调用 `get_variable_defs` 无本地选择结果。�
 #### MR-01 Button / Primary + Secondary + Text
 
 - 组件名称：Button
-- 所在页面：申请步骤1/2/3、门户、首次弹窗、方式选择、预审、签名
-- 原始来源：最新流程截图为主；门户少量可编辑
-- 图片位置：`22:3002` `22:3006` `22:3020` `20:1743`
+- 所在页面：申请步骤1/2/3、门户、首次弹窗、方式选择、预审、签名；**原生结构在本地 Sketch 信息填写页**
+- 原始来源：Sketch ZIP `按钮/蓝色/可操作`（L1）；最新流程截图作对照（L3）
+- 图片位置：Figma `22:3002` `22:3006` `22:3020` `20:1743`；Sketch 吸底组合
 - 推断类型：Button
-- 可识别尺寸：Visual Estimate 主按钮接近全宽胶囊；成对按钮约对半分。**⚠ 高度未 Exact**
-- 可识别颜色：品牌蓝底 + 白字；次按钮白底描边。HEX ⚠ 待人工确认
-- 可识别字体：中文无衬线 Medium/Regular。字号 ⚠ 待人工确认
+- Sketch Exact（2x / 1x pt）：成对胶囊 **339×98 / 169.5×49**，圆角 = 高度一半。Primary 填充 `#1677FF`，字「提交申请」PingFang SC Regular 36/`#FFFFFF`。Secondary 填充 `#FFFFFF`、描边 `#E5E5E5` 2px，字「暂存」PingFang SC Regular 36/`#333333`。文字按钮「取消申请」26/`#1677FF`。线框胶囊 Symbol 144×49、圆角 8（2x）。
+- 最新流程截图：主按钮有时是全宽胶囊（「提交信息」），与 Sketch 成对 50/50 不完全同一规格。**冲突时先记两条，不把截图估高写进 Token。**
 - 状态：Default。Pressed / Disabled / Loading **未在本次抽样中确认**
 - 使用场景：理赔申请、我知道了、选它、提交信息、暂存、取消申请
 - 纳入 DS：是 / Core
 - 置信度：High
-- Evidence：L3（申请链路）+ L2（门户重复）
+- Evidence：L1 Sketch 成对按钮 + L3 申请链路截图 + L2 门户重复
 
 #### MR-02 Selector / 表单选择行
 
@@ -443,7 +481,7 @@ Variables：对页面节点调用 `get_variable_defs` 无本地选择结果。�
 
 | Component | 来源 | 来源类型 | 出现 | 已有 Figma Component | 可直接复用 | 需人工重建 | 场景 | 状态（已见 / 未见） | 优先级 | Evidence | 备注 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Button | 最新申请链路 + 门户 | Image + Implicit | 高 | 否（标注条 Button 除外） | 否 | 是 | 提交/暂存/知道了 | Default；Disabled/Loading 未见 | P0 | L3 | 不要用标注条当规范 |
+| Button | Sketch 信息填写 + 最新申请链路 | Sketch Native + Image | 高 | Sketch 有 `按钮/蓝色/可操作` group，Figma 无业务 Component | Sketch 成对按钮是 | 全宽/小尺寸/状态仍要补 | 提交/暂存/知道了 | Default；Disabled/Loading 未见 | P0 | L1 Sketch / L3 截图 | 不要用标注条当规范 |
 | Selector | 申请表单 + 医院选择 | Image + Implicit | 高 | 否 | 结构部分是 | 是 | 医院/疾病/时间 | Default/Filled/Search；Error 未见 | P0 | L2/L3 | 理赔最高频 |
 | Input | 步骤2 | Image | 中 | 否 | 否 | 是 | 金额/描述/手机号 | Filled；Error 未见 | P0 | L3 | 手机号在步骤1是只读值还是 Input ⚠ |
 | Upload | 步骤3 + Sketch 补材 | Image | 高 | 否 | 否 | 是 | 发票病历等 | Empty/Uploaded；过程态未见 | P0 | L3 | |
@@ -492,7 +530,7 @@ Record Card、Timeline、Toast、Calendar 完整态、安心赔 Badge、门户�
 
 ## 9. 本阶段明确不写进正式 Token 的东西
 
-- 任何从截图估的 px / HEX / 字号 / 圆角
+- 任何从截图估的 px / HEX / 字号 / 圆角（Sketch JSON 读出的除外，且须标明 2x）
 - Ant Design / Material 默认值
 - Switch、协议 Checkbox、Upload Loading 等未见控件
 - `操作/按钮 Button` 标注条的尺寸
@@ -526,7 +564,8 @@ Record Card、Timeline、Toast、Calendar 完整态、安心赔 Badge、门户�
 
 1. 范围是否只做 **医疗险理赔**，车险、评估助手、老带新是否排除。
 2. `Component 2/3/5/6` 是否有你知道的真实含义。
-3. 申请步骤 1–3 是否就是当前线上主视觉；若是，P0 复刻以这些截图为准。
-4. 是否接受「最新流程主链路 = 图片源」这一判断。
+3. 申请步骤 1–3 是否就是当前线上主视觉；若是，P0 复刻以这些截图为准，Sketch 成对按钮作 Exact 尺寸源。
+4. 是否接受「最新流程主链路 = 图片源；本地 Sketch = 原生图层源」这一判断。
+5. 其余本地 Sketch 请继续拖进对话（当文件，不要截成图）。Figma 授权不能代替读你磁盘。
 
 确认后才开始 Phase 02 Foundation。本阶段到此停止。

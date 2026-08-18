@@ -26,3 +26,9 @@
 | 24 | 两种申请方式 Bottom Sheet |
 | 25–26 | Upload 批量区 + 材料卡 |
 | 28–30 | Toast / 签名槽 / 确认授权 |
+
+## 本地 Sketch 预览
+
+| 文件 | 说明 |
+| --- | --- |
+| `sketch-preview-info-fill.png` | 已解析的 Sketch 文档预览：信息填写 + 多责任赔付。原生图层，不是截图导入。 |
