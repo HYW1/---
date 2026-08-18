@@ -12,6 +12,10 @@
 | 理赔侧设计规范 | `NiXwro23h7CvvWT7GOb1ep` | `理赔业务流程` `19:880` | 最新业务流程稿 |
 | skill（Sketch 导入） | `ZXibIc4lflyHRoTF7OQV0L` | `历史稿` `0:1` | **暂停使用**，待你确认 |
 | 本地 Sketch（ZIP 解析） | 对话上传 `…250905…sketch` | `页面 1` + `控件` | 信息填写 + 多责任赔付，**原生图层可读** |
+| 理赔工具2 | `GXb44c8YqfhcRRRJxqnwRt` | `页面 1` `0:1`、`控件` | 保单解读 / 晒图 / 大量位图 |
+| 理赔工具1 | `45tHI9BSIUOQbLGxyiPGP7` | `页面 1` `0:1` | 住院医疗险手册、30秒体验理赔 |
+| 【视觉】药品查查250904 | `gPJrHdAClQUImOyr48Fdh3` | `新` `0:1`、`控件` | 药品查查清单，图层名大量错写成医院查查 |
+| 【视觉】医院查查优化250723 | `CAv6EsMXlX6ZFoIpg4B80Z` | `视觉` `0:1`、`控件` | 医院查查清单 + 部分位图/溢出稿 |
 
 此前误把 Figma 文件 `skill`（`ZXibIc4lflyHRoTF7OQV0L`）当作 Sketch 导入；**在你确认前不再使用该文件。**
 
@@ -42,6 +46,9 @@
 5. **可直接复用的 Figma 原生结构集中在「疾病查查 / 就诊医院」选择器链路。** 这里有 `BottomSheet`、`SearchBar`、`HotSearchPillsGrid`、`SelectionConfirmPanel` 等 named Frame，属于隐性组件，不是 Component Set。
 6. **画布上的 `操作/按钮 Button` Instance 多数是流程标注条，不是产品按钮。** 宽 3000–12000px、高 128px。不要把它当成 Primary Button 规范源。
 7. **产品按钮的第一份 L1 Exact 来自这份 Sketch，不是 Figma 截图。** 吸底「暂存 / 提交申请」是原生 group `按钮/蓝色/可操作`。
+8. **你发的四份 Figma 都按理赔工具稿盘。** 药品/医院查查是原生图层最多的视觉源；理赔工具1/2 里教育手册、体验理赔、晒图可作场景，大量 `位图` 只当 L3。
+9. **错误稿已丢弃，不当规范：** 药品查查「使用条件和流程」空壳 Sheet；医院查查「特定疾病列表」文字溢出重复；图层名 `医院查查2备份` 出现在药品查查文件里；文本 `**成` 等截断。以画面文案为准。
+10. **截图只对照、不量 Token。** 已装 `figma-design-extract` / `design-fidelity-verify` / `visual-qa` / `claims-visual-guard`。`https://dapollo.alipay.com/` 当前是 Kitchen 插件站，未登录拿不到内部 Token 表；Kitchen 外来 Symbol 继续当支付宝基础件，不写进理赔 DS。
 
 ---
 
@@ -129,6 +136,68 @@ Figma `skill`（`ZXibIc4lflyHRoTF7OQV0L`）先不作为理赔历史源。车险�
 
 外来 Symbol（Kitchen / Alipay）：Toast、Mask、StatusBar、返回按钮、人保 logo、Home Indicator。这些是支付宝基础件，不是理赔自建组件。
 
+### 1.6 理赔工具 Figma（本次新源）
+
+抽样图：`docs/phase-01-component-crops/new-sources/`。
+
+#### 药品查查 `gPJrHdAClQUImOyr48Fdh3` / `新`
+
+- 画面标题是「药品查查」，搜索 placeholder「搜索药品名称」。图层却大量叫 `医院查查2备份 *` → **图层名作废**。
+- 约 26 个 750 宽屏，image fill 很少（9），TEXT 755，**适合 L1**。
+- 已丢弃：`自定义底部面板备份 7`「先进药械使用条件和流程」内容区空灰底。
+- MIXED 字体 9 处（清单说明行、药品描述）→ 这些字号/字重不当 Exact。
+
+**L1 Exact（2x 画布，1x = ÷2）来自 `医院查查2备份 60` `0:1249`，以画面为准：**
+
+| 元素 | 2x | 1x pt | 样式 |
+| --- | --- | --- | --- |
+| 页标题「药品查查」 | 字号 56 Semibold | 28 | PingFang SC / `#333333` |
+| SearchBar 底 | 654×64，圆角 32 | 327×32，圆角 16 | `#EBEFF5`；placeholder `#A1A9B4` Regular 26 |
+| Filter pill | 207×64，圆角 32 | 103.5×32，圆角 16 | `#EBEFF5`；字 Regular 26 `#333333` |
+| 药名 | Semibold 32 | 16 | `#333333` |
+| Tag「进口药/原研药」 | Semibold 26 | 13 | `#40B0F8` |
+| 说明正文 | Regular 26 | 13 | `#666666` / `#999999` |
+
+注意：药械 Tag 用 `#40B0F8`，医院查查「王牌产品」用 `#1677FF`。两套蓝都记下，**不合并成一个 Token**，除非你确认就是同一色。
+
+#### 医院查查 `CAv6EsMXlX6ZFoIpg4B80Z` / `视觉`
+
+- 约 27 个大屏；image fill 76 + TEXT 885，混稿。
+- 已丢弃：`医院查查2备份 17`「特定疾病列表」单元格「严重冠心病」横向重复溢出。
+- 可读 native：`医院查查2备份 21` `0:3594` 结果列表。
+
+**L1 Exact（同上 2x）：**
+
+| 元素 | 样式 |
+| --- | --- |
+| 页标题「医院查查」 | PingFang SC Semibold 56 / `#333333` |
+| SearchBar placeholder「搜索医院名称」 | Regular 26 / `#A1A9B4` |
+| 医院名 | Semibold 32 / `#333333` |
+| 地址 | Regular 26 / `#999999` |
+| Badge 三甲/公立/综合医院 | `#40B0F8` Semibold/Medium 26 |
+| 「王牌产品」 | Regular 22 / `#1677FF` |
+| 上榜 | Regular 22 / `#934300` |
+
+结构与最新流程里的就诊医院 Bottom Sheet 同类（SearchBar + 结果行 + Badge），但这里是**整页清单**不是 Sheet。后续 Selector 规范要分「申请内选择」和「查查工具页」两套场景，不要合成一个组件就交差。
+
+#### 理赔工具1 `45tHI9BSIUOQbLGxyiPGP7`
+
+原生 Frame：`目录`、`正文1/5/6`、`体验理赔1–5`、`理赔攻略`、`档案资料`。另有若干 `位图`。
+
+- `正文6`：住院医疗险手册 Tab（就医前/中/申请/进度查询/完结）+ 4 步审核时间轴。教育内容，P1。
+- `体验理赔5`：成功页，全宽胶囊主按钮「完成」。尺寸未在本次抽成 Exact（先 L3，待对节点量）。
+- 控件页有 `必须提供`、`吸底组合` Component，与 Sketch 信息填写同源命名。
+
+#### 理赔工具2 `GXb44c8YqfhcRRRJxqnwRt`
+
+22 个大屏里很多是 `位图` Rectangle（L3）。可读 native：
+
+- `视觉-4备份 64`：保单解读 / 条款解读 / 理赔解读。有截断文本 `**成` → **该片段丢弃**。
+- `晒图`：口碑列表，筛选胶囊「全部 / 晒图」；选中蓝底。UGC，P1。
+- `浮层-发放详情`：Sheet 结构候选。
+
+Published components 几乎全是 Kitchen 导航/蒙层/关闭/Home Indicator，不是理赔表单件。
+
 **还需要你发的 Sketch（下列标签对应的源文件）：** 优先拖 `.sketch` 进对话（当文件，不要截成图）；多个可以打成一个 zip。GitHub 单文件建议 < 50MB。
 
 **门户**
@@ -205,7 +274,7 @@ Variables：对页面节点调用 `get_variable_defs` 无本地选择结果。�
 | 组件 | 结构证据 | 出现 | 分类 | 使用场景 | 是否可直接提取尺寸 | Evidence | 优先级 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Bottom Sheet Selector | named `BottomSheet` + `SheetHeader` | 历史 10 / 流程 8 | **Core** | 就诊医院、疾病选择 | 容器可测；内部部分图片 | L2 | P0 |
-| SearchBar | named `SearchBar` / `search-box-multiselect` | 8+ | **Core** | 医院搜索 | 可测 | L2 | P0 |
+| SearchBar | named `SearchBar` / 药品·医院查查工具页 | 8+ | **Core** | 医院/药品搜索 | 工具页可测 L1；申请内 Sheet 仍 L2 | L1 工具页 / L2 申请内 | P0 |
 | Hot Search Pills | `SectionHotSearch` + `HotSearchPillsGrid` | 3+ | **Core** | 历史搜索 / 热搜医院 | 可测 | L2 | P0 |
 | Selected Chip | `ActiveSelectedChip` / `selection-tag` / `disease-chip` | 17+14+5 | **Core** | 已选医院/疾病/就医类型 | 可测 | L2 | P0 |
 | Selection Confirm Panel | `SelectionConfirmPanel` + `ConfirmButton` | 8 | **Core** | 选择器底部确认 | 可测 | L2 | P0 |
@@ -494,7 +563,7 @@ Variables：对页面节点调用 `get_variable_defs` 无本地选择结果。�
 | Nav Bar | 全链路 | Native TopBar + 蓝底图 | 高 | 浅色 TopBar 有；蓝底没有 | 浅色可参考 | 蓝底需重建 | 理赔申请头 | Default | P0 | L1/L3 | |
 | Overlay | Sheet/Dialog 底层 | Native Instance | 高 | 是（外部库） | 可参考 | 否 | 遮罩 | Default | P1 | L1 | |
 | Chip / Tag | 医院热搜、已选疾病 | Implicit | 高 | 否 | 结构是 | 是 | 多选回填 | Default/Active/Remove | P0 | L2 | |
-| SearchBar | 医院选择 | Implicit | 高 | 否 | 结构是 | 少量 | 医院搜索 | Default/Active/Clear | P0 | L2 | |
+| SearchBar | 医院选择 + 查查工具页 | Implicit + Native | 高 | 否 | 工具页结构是 | 申请内 Sheet 少量 | 医院/药品搜索 | Default/Active/Clear | P0 | L1 工具页 / L2 申请内 | 2x SearchBar 654×64 r32 `#EBEFF5` |
 | Record Card | 理赔记录 | Image | 中 | 否 | 否 | 是 | 历史案件 | Fail/Action | P1 | L3 | |
 | 安心赔 Badge | 门户/说明 | Mixed | 中 | 否 | 否 | 是 | 品牌 | Default | P1 | L2/L3 | |
 | Calendar | 就诊时间 | Implicit name + Image | 中 | 否 | 否 | 是 | 日期 | 完整态待确认 | P1 | L2/L3 | |
@@ -530,11 +599,14 @@ Record Card、Timeline、Toast、Calendar 完整态、安心赔 Badge、门户�
 
 ## 9. 本阶段明确不写进正式 Token 的东西
 
-- 任何从截图估的 px / HEX / 字号 / 圆角（Sketch JSON 读出的除外，且须标明 2x）
-- Ant Design / Material 默认值
+- 任何从截图估的 px / HEX / 字号 / 圆角（Sketch JSON / Figma 可读图层除外，且须标明 2x）
+- Ant Design / Material 默认值；Dapollo/Kitchen 未登录页面上的通用值
+- 乱码、截断、文字溢出、空壳占位帧
+- 图层名与画面不符时的图层名（例如药品查查文件里的 `医院查查2备份`）
 - Switch、协议 Checkbox、Upload Loading 等未见控件
 - `操作/按钮 Button` 标注条的尺寸
 - `Component 2/3/5/6` 无语义组件的业务定义
+- `#40B0F8` 与 `#1677FF` 在未确认前不合并
 
 ## 10. 和最新业务流程的关系
 
@@ -555,6 +627,8 @@ Record Card、Timeline、Toast、Calendar 完整态、安心赔 Badge、门户�
 3. 画布标注组件与产品组件分开。
 4. 车险 / 我的页 / 增长分享默认 P2，除非你确认同属这套 DS。
 5. 不见过程态就写「未见」，不补 Loading/Error 假数据。
+6. 乱码 / 空壳 / 错误图层名丢弃，不以视觉模型从截图量 Token。
+7. 药品查查与医院查查是工具页，申请内 Selector 是另一场景。
 
 ---
 
@@ -567,5 +641,7 @@ Record Card、Timeline、Toast、Calendar 完整态、安心赔 Badge、门户�
 3. 申请步骤 1–3 是否就是当前线上主视觉；若是，P0 复刻以这些截图为准，Sketch 成对按钮作 Exact 尺寸源。
 4. 是否接受「最新流程主链路 = 图片源；本地 Sketch = 原生图层源」这一判断。
 5. 其余本地 Sketch 请继续拖进对话（当文件，不要截成图）。Figma 授权不能代替读你磁盘。
+6. `#1677FF`（申请按钮）与 `#40B0F8`（查查 Tag）是否就是两套蓝。
+7. 药品/医院「查查」是进同一套 DS，还是只给申请 Selector 当参考。
 
 确认后才开始 Phase 02 Foundation。本阶段到此停止。
