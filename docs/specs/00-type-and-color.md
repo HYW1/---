@@ -172,42 +172,32 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=75-2
 独立画板：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=90-882  
 页面：`---视觉规范---`（`20:1012`）· 画板 `圆角与间距`（`90:882`）
 
-### 圆角
-
-| 值 | 用途 |
-|---|---|
-| 胶囊（高/2） | 按钮 / 标签（完全圆） |
-| 48 | 弹窗（MultiActionDialog） |
-| 32 | 页面级大卡片（718 宽） |
-| 24 | 标准卡片 / form-card |
-| 16 | 嵌套小卡 / 图标容器 |
-| 8 | 小控件 / 按钮组内 |
-
 ### 间距
 
-| 值 | 用途 |
-|---|---|
-| 4 | 最小元素间距（图标与文字） |
-| 8 | 小元素间距（标签间） |
-| 10 | 元素间距（列表项内文字行间） |
-| 12 | 元素间距（列表项间、表单字段间，高频） |
-| 16 | 卡片间距 / 页面左右边距 |
-| 20 | 模块间距 |
-| 24 | 大模块间距 / 卡片内分组 |
-| 32 | 区块间距 |
-| 48 | 覆盖层间距（弹窗内边距） |
+| 间距值 | Token | 用途 |
+|---|---|---|
+| 4 | Space/ElementsS | 图标与文字、紧凑组内 |
+| 8 | Space/ElementsM | 标签间、小控件间 |
+| 10 | Space/ElementsL | 列表项内文字行间 |
+| 12 | Space/ElementsXL | 列表项间、表单字段间（高频） |
+| 16 | Space/PagePadding | 卡片间距、页面左右边距 |
+| 20 | Space/ElementsXXL | 模块间距 |
+| 24 | Space/CardPadding | 大模块间距、卡片内分组 |
+| 32 | Space/SectionGap | 区块之间 |
+| 48 | Space/OverlayPadding | 弹窗内边距 |
 
-### 内边距
+### 圆角
 
-| 值 | 用途 |
-|---|---|
-| 0 | 容器无内边距 |
-| 10 | 小卡 / 标签底 |
-| 12 | 列表项内 |
-| 20 | 模块卡 |
-| 24 | 标准卡片 / 嵌套卡 |
-| 28 | 强调卡 |
-| 32 | 页面级卡 / 弹窗 |
+每行带形状图标，品红 L 形标记左下圆角。
+
+| 圆角值 | Token | 用途 |
+|---|---|---|
+| 胶囊（高/2） | Radius/ButtonRadius | 按钮 / 标签（完全圆） |
+| 48 | Radius/DialogRadius | 弹窗（MultiActionDialog） |
+| 32 | Radius/PageCardRadius | 页面级大卡片（718 宽） |
+| 24 | Radius/CardRadius | 标准卡片 / form-card |
+| 16 | Radius/InnerCardRadius | 嵌套小卡 / 图标容器 |
+| 8 | Radius/ElementRadius | 小控件 / 按钮组内 |
 
 ## 下一步
 
