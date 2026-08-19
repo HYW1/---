@@ -37,4 +37,4 @@
 
 ## 下一步
 
-Selector → 信息确认 → Icon。仍用基础库实例，不手绘。
+信息确认卡 → Input → Upload → Dialog/BottomSheet。仍用基础库实例，不手绘。
