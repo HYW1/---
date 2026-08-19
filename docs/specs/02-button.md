@@ -2,8 +2,8 @@
 
 理赔设计规范 · 行动点 · 全量按钮形态 + 按钮组合组件。按历史稿真实采样。750 二倍图原值。
 
-独立画板：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=138-2  
-页面：`---视觉规范---`（`20:1012`）· 画板 `按钮`（`138:2`）
+独立画板：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=145-2  
+页面：`---视觉规范---`（`20:1012`）· 画板 `按钮`（`145:2`）
 
 ## 单按钮形态
 
