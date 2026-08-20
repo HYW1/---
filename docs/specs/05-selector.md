@@ -33,15 +33,37 @@
 - 跳转选择：右侧文案/标签 + 箭头，打开选择面板
 - 行内选择：右侧直接放选项组，无需弹层
 
-## 4. 选择面板 HospitalSelector
+## 4. 选择面板
 
-弹层主体（搜索 / 历史 / 热搜 / 列表）。
+### 4.1 就诊医院 HospitalSelector
 
 | 组件 | 属性 |
 |---|---|
 | 选择器/就诊医院 HospitalSelector | 状态=默认 · 添加后 · 搜索结果 |
 
 元件：SheetHeader · SearchBar · SectionTitle · GradeBadge · HospitalItem · HospitalPill · SelectedChip · SelectControl
+
+### 4.2 查查（医院查查 / 药品查查）
+
+历史稿 Sketch 导入后结构混乱，已按截图重做 Auto Layout。
+
+**元件**
+
+| 组件 | 属性 |
+|---|---|
+| 选择器/查查搜索栏 LookupSearchBar | — |
+| 选择器/筛选触发 FilterTrigger | 状态=默认 · 展开（箭头↓/↑，展开蓝色） |
+| 选择器/筛选胶囊 FilterPill | 状态=默认 · 展开 |
+| 选择器/查查标签 LookupTag | 状态=选中 · 未选 |
+| 选择器/级联侧栏项 CascadeSideItem | 状态=默认 · 选中（左侧蓝条） |
+| 选择器/级联列表项 CascadeListItem | 状态=默认 · 选中（蓝色文案） |
+
+**面板**
+
+| 组件 | 属性 | 结构 |
+|---|---|---|
+| 选择器/药品查查 MedicineLookup | 状态=疾病面板 | 搜索栏 + 筛选触发行 + 标签网格（3 列） |
+| 选择器/医院查查 HospitalLookup | 状态=城市级联 | 搜索栏 + 筛选胶囊行 + 省市级联（侧栏+列表） |
 
 ## 5. 确认条 ConfirmBar
 
