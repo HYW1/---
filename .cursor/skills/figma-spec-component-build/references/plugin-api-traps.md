@@ -7,7 +7,8 @@
 - 每次调用从文件第一页开始。用 `await figma.setCurrentPageAsync(page)`，禁止赋值 `figma.currentPage`。
 - **一次脚本只切一次页。** 多页拆成多次并行 `use_figma`。
 - 必须 `return` 变更过的 node id。`figma.notify`、`console.log` 不可用。
-- 脚本报错 = **整段没执行**。读报错，改脚本，再跑。
+- 写操作必须串行，禁止并行 `use_figma` 改同一文件。
+- 禁止编造 node id；只用上一次 return 或 `getNodeById` 读到的。
 - 颜色 `{r,g,b}` 是 **0–1**。`#1677FF` → `{ r: 22/255, g: 119/255, b: 1 }`。
 
 ## 字
