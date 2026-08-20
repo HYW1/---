@@ -102,7 +102,6 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=213-23975
 
 | 色值 | 场景 |
 |---|---|
-| #FF3B30 | 拒赔 / 警告 / 审核未通过 |
 | #FF5B4F | 理赔审核未通过 / 申请已关闭 |
 | #FF0000 | 审核未通过 / 即将超时 |
 | #FF6430 | 必须提供 |
