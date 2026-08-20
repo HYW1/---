@@ -1,6 +1,6 @@
 # 理赔业务 Design System — 文档目录
 
-默认规范：`.cursor/skills/alipay-app-design-system`。Figma 按 **750** 画，组件用已发布 APP 基础库实例，不要手绘主按钮。
+默认规范：`.cursor/skills/alipay-app-design-system`。从参考原稿做目录组件：`.cursor/skills/figma-spec-component-build`。Figma 按 **750** 画，组件用已发布 APP 基础库实例，不要手绘主按钮。
 
 ## 怎么读
 
