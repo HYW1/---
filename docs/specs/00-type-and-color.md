@@ -34,7 +34,7 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=213-23975
 
 ## Type
 
-字号阶梯**不重复**，**最小 22**；示例统一为 **Aa**。格式：字号 / 行高 / 字重。颜色变体见颜色区；金额数字见「字体使用 · Alibaba Sans」。
+使用规则：中文用 PingFang SC，金额数字用 Alibaba Sans 102 Ver2；按下方字号阶梯选用，同一字号不重复定义；最小字号 22。
 
 | 示例 | 字号 / 行高 / 字重 | 字色 | 场景 |
 |---|---|---|---|
