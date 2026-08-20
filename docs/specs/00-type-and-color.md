@@ -172,3 +172,15 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=213-23975
 | 24 | Radius/CardRadius | 标准卡片 / form-card |
 | 16 | Radius/InnerCardRadius | 嵌套小卡 / 图标容器 |
 | 8 | Radius/ElementRadius | 小控件 / 按钮组内 |
+
+## 溯源摘录（示例）
+
+| Token | 场景 | 证据页 | 节点 | 备注 |
+|---|---|---|---|---|
+| `#0091FF` · 26 Regular | 申请中 / 审核中 / 查勘中 / 定损中 / 已结案 | 历史稿 | [`8:10912`](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=8-10912) 等印章 TEXT | 同色还有已申请 / 已取消 / 申请通过 / 审核通过；业务流程可编辑层未扫到 |
+| `#CE914F` | 获赔金额 / 获赔576元 | 历史稿 | [`8:9544`](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=8-9544) · [`8:9958`](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=8-9958) | 评价卡获赔文案 |
+| `#FF5B4F` | 理赔审核未通过 / 申请已关闭 | 历史稿 | [`8:9611`](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=8-9611) | 状态标题 |
+| `#FF6430` | 必须提供 | 历史稿 / 流程 | [`22:3483`](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=22-3483) | 材料必填 |
+| `#0073FF` · 44 Semibold | 可赔结论大标题 | 历史稿 | [`5:498`](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=5-498) | 「本次就医可以申请理赔」 |
+
+后续增改色值 / 字号时，按同表格式补一行节点，不另开无来源条目。
