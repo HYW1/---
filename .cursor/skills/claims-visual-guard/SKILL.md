@@ -14,7 +14,7 @@ description: Guardrails for measuring 理赔工具 visuals. Use when extracting 
 - 原生图层：Figma Plugin API / `get_metadata` / Sketch ZIP JSON
 - `figma-design-extract`：从结构化数据出 spec table
 - `visual-qa`：只拿截图当对照，不作 Exact 来源
-- 在规范页**做成可切组件**时走 `figma-spec-component-build`（变体轴、TEXT 属性、原稿还原；禁止用 Frame 冒充实例）
+- 做成可切组件时走 `figma-spec-component-build`（不绑理赔；变体轴、TEXT 属性、原稿还原）
 
 ## 禁止当正确稿
 

@@ -53,7 +53,7 @@ version: 1.0
 ## Required workflow
 
 1. **Confirm platform** — 小程序 / H5 / APP；默认画布 `750 × 1624`（2×）。代码若用 375 逻辑宽，数值 ÷2。
-2. **Load Figma skills** — `figma-use`；整页再用 `figma-generate-design`。组件/变体再加载 `figma-generate-library`。在 `理赔侧设计规范` 上从参考原稿做目录组件时，再加载 `figma-spec-component-build`（变体轴、TEXT 属性、原稿还原）。
+2. **Load Figma skills** — `figma-use`；整页再用 `figma-generate-design`。组件/变体再加载 `figma-generate-library`。从参考原稿做规范目录组件（任意业务）时，再加载 `figma-spec-component-build`。
 3. **Match a pattern first** — 在历史稿按 [references/pattern-archive.md](references/pattern-archive.md) 找近邻模块（门户 / 卡片 / 状态 / 表单步骤 / 结果）。
 4. **Implement with library components** — 用 [references/components.md](references/components.md) 的 key 导入实例，禁止手绘顶栏/主按钮/开关。
 5. **Bind semantic tokens** — 用 [references/tokens.md](references/tokens.md) 的 APP 语义色与字号；不要另造第二套蓝。
