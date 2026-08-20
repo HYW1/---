@@ -62,3 +62,6 @@
 1. 看见「乱」先并排截原稿，再决定是穿模还是半截白。
 2. 用户说「2 到 3 有半截白线」→ 按坐标加回去，不要辩论。
 3. 新组件先问：切了状态，数字和标题还会不会错。会错就把它们做成属性。
+4. 条里的每一步必须是项实例（菱形）。套 Frame 的「编组」切不了，也不要发明原稿没有的进度色。
+
+同法拆完的其余条（理赔这份）：TimelineItem / ProgressStepper 步骤1–4当前 / ProcessStepItem / GuideStepItem（三角 clone，不是 `›`）/ NoticeItem。规格见 `docs/specs/07-stepper.md`。
