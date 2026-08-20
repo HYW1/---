@@ -97,6 +97,7 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=213-23975
 |---|---|
 | #1677FF | 累计获赔 / 门户金额 |
 | #0C3978 | 账单金额 / 待赔付 / 赔付比例数字 |
+| #CE914F | 获赔金额 |
 
 ### 状态色
 
@@ -105,7 +106,6 @@ Figma：https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=213-23975
 | #FF5B4F | 理赔审核未通过 / 申请已关闭 |
 | #FF0000 | 审核未通过 / 即将超时 |
 | #FF6430 | 必须提供 |
-| #22B35E | 个人信息隐私保护中 |
 
 ### 中性底 · 背景
 
