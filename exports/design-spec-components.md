@@ -48,7 +48,7 @@ Token / 画布跟当前产品的设计系统走。Figma 里保持设计稿原值
 2. 两份原稿先当两份。布局差用变体，不要收成更干净的一种。
 3. 状态只换皮，不换料。位置/选中/空态是「状态」；标题、序号、标签是 TEXT。切当前→未到，该步文案和数字还在。
 4. 点得着才能切。必须是 COMPONENT / INSTANCE（菱形）。套一层 Frame（点槽、卡壳）右栏没有变体。
-5. 结构 Auto Layout，装饰 Absolute。等分 FILL，拉开 SPACE_BETWEEN，原稿空隙用 spacer 量死。光晕、连线、徽章、气泡 Absolute，并且压在内容下面（先 insert 线）。
+5. 结构 Auto Layout，装饰 Absolute。等分 FILL，拉开 SPACE_BETWEEN。步骤条列距用间距 FILL（连线/三角放进间距里），拉宽实例要铺开，禁止写死 spacer 把内容钉在左边。光晕、底渐变 Absolute。
 6. resize() 会缩放子层。小图居中在大热区：外框 resizeWithoutConstraints，内图形自己 resize 再设 x/y。不要把 60 的圆 resize 成 85。
 7. 还原产品能看见的；丢掉导入垃圾。半截进度线、错位徽章是稿。穿出透明边的叠线按可见边缘重画，不要整组 clone。
 8. 用户指着原稿说「有」，就加回去。不要解释「我帮你整理了」。吃不准：默认还原，再做一条变体让他切。
