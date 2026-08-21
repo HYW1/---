@@ -43,7 +43,8 @@ oval.y = 12.5;
 
 ## 变体与属性
 
-- 图层名声明轴：`状态=当前` 或 `状态=步骤2, 2到3=半段白`。
+- 图层名声明轴：优先单轴 `状态=步骤1`。多轴才写成 `状态=步骤2, 2到3=半段白`。
+- **GROUP 没有 `constraints`。** 克隆气泡时只设 `layoutPositioning = 'ABSOLUTE'` 和 x/y，不要给 Group 写 constraints。
 - TEXT 属性加在 **COMPONENT_SET** 上，不要对单个变体的 `componentPropertyDefinitions` getter 动手（会丢）。
 - `componentPropertyReferences` 只能设在主组件图层，不能设在 INSTANCE 内部。
 - 同一 TEXT 属性全局一个 `defaultValue`。目录上的 1/2/3 用 `instance.setProperties`。
