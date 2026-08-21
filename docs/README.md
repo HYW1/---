@@ -17,6 +17,7 @@
 | --- | --- | --- | --- |
 | 00 字体与颜色 | [specs/00-type-and-color.md](./specs/00-type-and-color.md) | APP 文本样式 + APP 色 token | [Figma](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=65-16) |
 | 01 Button | [specs/01-button.md](./specs/01-button.md) | APP Button / ButtonGroup / PageFooter | [Figma](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=62-14) |
+| 08 服务入口 | [specs/08-service-entry.md](./specs/08-service-entry.md) | 入口条 4/3/2/1 个等分 | [Figma](https://www.figma.com/design/NiXwro23h7CvvWT7GOb1ep/?node-id=502-758) |
 
 ## 接下来
 
