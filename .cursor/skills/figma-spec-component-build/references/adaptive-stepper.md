@@ -15,9 +15,11 @@
 ## 连线
 
 - 步间连线、虚线、三角：**放进 FILL 间距里**，水平 FILL、垂直对齐到点/胶囊中心。
+- 项比圆宽时：间距里一段接到项边，**项上左右 stub**（点下面）接到圆的可见边。禁止把线负 x 探进上一列——后画的间距会盖住内圆，像穿过圆心。
+- 样式跟原稿 dump：0 高 LINE + `strokeWeight` + `strokeCap`（常见 `SQUARE`），不要用填色矩形冒充描边。
 - 底渐变 Absolute，`constraints.horizontal = STRETCH`。
-- 申请步骤那种跨多列的进度线：可 `SCALE`，或拆进两段 FILL 间距。
 - 徽章、可修改气泡：仍 Absolute + `MIN/MIN`，不要跟着拉变形。
+- 不要为连线单独做 COMPONENT。细则：[stepper-bar-lessons.md](stepper-bar-lessons.md)。
 
 ## 验收
 
