@@ -3,8 +3,8 @@ name: design-spec-components
 description: >-
   从参考原稿做视觉规范页，并建成可切换的 Figma 组件与变量。适用于任何业务、任何 Figma 文件：
   选择器、表单、步骤条、导航、列表、日期/城市、图标、弹层等。用户说「做规范」「做组件」
-  「还原原稿」「加变体」「和原稿不一样」「出一份规范」时启用。不绑定理赔。
-  配套 Figma MCP：use_figma、figma-generate-library。
+  「还原原稿」「加变体」「和原稿不一样」「出一份规范」「要自适应」时启用。不绑定理赔。
+  步骤条点/标/项/条/列表全部自适应。配套 Figma MCP：use_figma、figma-generate-library。
 ---
 
 # 做视觉规范 + 做组件
@@ -55,14 +55,15 @@ Token / 画布跟**当前产品**的设计系统走。本仓库默认 `alipay-ap
 2. **两份原稿先当两份。** 看起来像「同一条 + 一个气泡」时分别 dump。布局差用变体，不要收成更干净的一种。
 3. **状态只换皮，不换料。** 位置/选中/空态是 `状态`；标题、序号、标签是 TEXT。切「当前 → 未到」，该步文案和数字还在。
 4. **点得着才能切。** 必须是 COMPONENT / INSTANCE（菱形）。套 Frame（点槽、卡壳）右栏没有变体。
-5. **结构 Auto Layout，装饰 Absolute。** 等分 FILL，拉开 SPACE_BETWEEN。步骤条列距用 **间距 FILL**（连线/三角放进间距里），拉宽实例要铺开，禁止写死 spacer 把内容钉在左边。光晕、底渐变 Absolute。
-6. **`resize()` 会缩放子层。** 小图居中在大热区：外框 `resizeWithoutConstraints`，内图形自己 resize 再设 x/y。
-7. **还原产品能看见的；丢掉导入垃圾。** 半截进度线、错位徽章是稿。穿出透明边的叠线按可见边缘重画，不要整组 clone。
-8. **用户指着原稿说「有」，就加回去。** 不要说「我帮你整理了」。吃不准：默认还原 + 再做一条变体。
-9. **一屏对照再宣布完成。** 差 2px 的对齐、半截线、气泡坐标，以原稿为准。
-10. **一次脚本只做一件可验证的事。** 失败=整段没执行。颜色 0–1。每调用最多一次 `setCurrentPageAsync`。禁止 `figma.notify` / `console.log`。
-11. **先搜再画，禁止 detach。** 对齐问题用 AL / 约束 / 嵌实例解决，不要打散库组件。
-12. **不删参考原稿。** 规范页末尾保留溯源分区；只 clone，不改原节点位置和内容。
+5. **步骤条全家自适应。** 点、标、项、条、列表都要随容器和文案重排，不是只改最外层的条。项 **HUG** 标题；列表项 **FILL**；条用 **[项][间距 FILL + 连线/三角][项]**。拉宽实例必须铺开。点/圆直径固定。细则：[references/adaptive-stepper.md](references/adaptive-stepper.md)。
+6. **结构 Auto Layout，装饰 Absolute。** 等分 FILL，拉开 SPACE_BETWEEN。底渐变 `STRETCH`。徽章/气泡 `MIN/MIN`。连线放进 FILL 间距，禁止 Absolute + `MIN/MIN` 把列钉死。
+7. **`resize()` 会缩放子层。** 小图居中在大热区：外框 `resizeWithoutConstraints`，内图形自己 resize 再设 x/y。
+8. **还原产品能看见的；丢掉导入垃圾。** 半截进度线、错位徽章是稿。穿出透明边的叠线按可见边缘重画，不要整组 clone。
+9. **用户指着原稿说「有」，就加回去。** 不要说「我帮你整理了」。吃不准：默认还原 + 再做一条变体。
+10. **一屏对照再宣布完成。** 差 2px 的对齐、半截线、气泡坐标，以原稿为准。
+11. **一次脚本只做一件可验证的事。** 失败=整段没执行。颜色 0–1。每调用最多一次 `setCurrentPageAsync`。禁止 `figma.notify` / `console.log`。
+12. **先搜再画，禁止 detach。** 对齐问题用 AL / 约束 / 嵌实例解决，不要打散库组件。
+13. **不删参考原稿。** 规范页末尾保留溯源分区；只 clone，不改原节点位置和内容。
 
 ---
 
@@ -121,7 +122,7 @@ TEXT 绑在**主组件图层**，不能绑实例子层。一套 TEXT 一个 `def
 
 1. **原子**（点、芯片、勾）：只要视觉态。数字随父级变 → 内层数字透明，父级 Absolute TEXT 绑 `序号`。
 2. **项**（原子 + 标题）：嵌原子实例；切 `状态` 只换皮。
-3. **条 / 面板**：AL 排项；装饰 Absolute 且先插入。Absolute 子节点 `constraints` 用 MIN/MIN，避免父级拉伸跑位。
+3. **条 / 面板**：AL 排项；间距 FILL，连线进间距。底渐变 Absolute `STRETCH`。徽章/气泡 Absolute `MIN/MIN`。
 4. **溢出**：徽章/气泡可能探出 —— 父级不要随便开 clip；只在需要遮罩的图片/圆里 clip。
 5. **热区**：不够点就加大透明槽，不要缩放图形。
 6. **目录卡** + **description** + **文档**。
@@ -155,6 +156,7 @@ TEXT 绑在**主组件图层**，不能绑实例子层。一套 TEXT 一个 `def
 - [ ] 参考原稿还在，未被改动
 - [ ] description 和 spec 写了切法与溯源
 - [ ] 没有把 A 产品的 token/文案抄进 B 产品
+- [ ] 步骤条点/标/项/条/列表均为自适应：项 HUG 或列表 FILL，条间距 FILL；拉到 900 四步铺满、连线跟着走、圆不变形
 
 ---
 
@@ -170,6 +172,8 @@ TEXT 绑在**主组件图层**，不能绑实例子层。一套 TEXT 一个 `def
 - 手绘已有库的按钮 / 导航 / 开关
 - 移动端稿无端加 hover
 - 把量死的 129.5「取整」掉
+- 步骤条只改条、不改项；用 FIXED spacer/列宽把内容钉在左边
+- 把步骤圆 `resize` 拉扁来「铺满」
 
 ---
 
@@ -180,6 +184,7 @@ TEXT 绑在**主组件图层**，不能绑实例子层。一套 TEXT 一个 `def
 - 「点了切不了状态」→ 查是否点到 Frame；改成项实例并暴露；状态与序号拆开。
 - 「给理财做一套表单行规范」→ 同一拆法，换 token/文案/溯源，不要带理赔字段。
 
-对照例（含坐标）：[references/worked-stepper.md](references/worked-stepper.md)。
+对照例（含坐标）：[references/worked-stepper.md](references/worked-stepper.md)。  
+自适应（点/项/条）：[references/adaptive-stepper.md](references/adaptive-stepper.md)。
 
 Figma agent / Make 导入用单文件（官方不支持 references 目录）：[`exports/design-spec-components.md`](../../../exports/design-spec-components.md)。

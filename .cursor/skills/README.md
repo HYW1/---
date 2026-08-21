@@ -22,7 +22,7 @@ MIT: `LICENSE.figma-design-skills.txt`.
 ## Project
 
 - `alipay-app-design-system`：**本仓库默认 Figma / UX 规范。** Token、组件 key、750 画布、历史稿体验模式。禁止手绘 TopBar / 主按钮。换产品时换对应设计系统。
-- `figma-spec-component-build`（slash：`design-spec-components`）：**做规范 + 做可切组件（不绑业务）。** 规范目录页、变体/属性/变量、原稿还原。Figma 上传用 `exports/design-spec-components.md`（单文件，官方不支持 references 目录）。
+- `figma-spec-component-build`（slash：`design-spec-components`）：**做规范 + 做可切组件（不绑业务）。** 规范目录页、变体/属性/变量、原稿还原。**步骤条点/项/条全部自适应。** Figma 上传用 `exports/design-spec-components.md`（单文件，官方不支持 references 目录）。
 - `c-end-visual-craft`：C 端视觉质感。不重造组件；只做氛围 / 主视觉 / 去 AI 感。
 - `claims-visual-guard`: 理赔工具稿护栏。乱码、空壳、图层名错误一律丢弃。仅量那批稿时用。
 

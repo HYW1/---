@@ -21,6 +21,7 @@
 
 - 有结构关系的用 `figma.createAutoLayout()`。
 - 连线、光晕、气泡：`layoutPositioning = 'ABSOLUTE'`。先挂到父级再设 Absolute，再设 x/y。
+- 步骤条列距用子节点 `layoutSizingHorizontal = 'FILL'`，连线/三角放进间距。底渐变 `constraints.horizontal = 'STRETCH'`。徽章 `MIN/MIN`。不要把步间连线 Absolute + MIN 钉死。
 - `layoutSizing*` 是 `FIXED | HUG | FILL`；轴模式是 `FIXED | AUTO`。不要混。
 - FILL 只能给已经在 AL 父级里、且不是 Absolute 的子节点。
 - 装饰线 **z 在内容下**：`insertChild(0, line)`。否则线会画在小圆旁边的透明热区里。

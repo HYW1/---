@@ -33,7 +33,11 @@
 | 连线 y | 64 | 85 |
 | 气泡 | 无 | 编组-4 Absolute **(160, 24)**：第 1 步右侧、1→2 线上方 |
 
-气泡不要做成第 1 列里居中的胶囊，也不要改变 144 列宽。
+气泡不要做成第 1 列里居中的胶囊，也不要用气泡去撑开列宽。项宽 **HUG** 标题，条上靠 **FILL 间距**铺开。
+
+## 自适应
+
+申请步骤条已经是 `[项][间距 FILL][项]`。其余条同样：**点固定、项 HUG、条间距 FILL、列表 FILL**。细则见 [adaptive-stepper.md](adaptive-stepper.md)。
 
 ## 连线：还原看见的，丢掉穿模的
 
@@ -63,5 +67,6 @@
 2. 用户说「2 到 3 有半截白线」→ 按坐标加回去，不要辩论。
 3. 新组件先问：切了状态，数字和标题还会不会错。会错就把它们做成属性。
 4. 条里的每一步必须是项实例（菱形）。套 Frame 的「编组」切不了，也不要发明原稿没有的进度色。
+5. 步骤条全家都要自适应。只把条改成 FILL、项还写死 144，拉宽一样空右边。
 
-同法拆完的其余条（理赔这份）：TimelineItem / ProgressStepper 步骤1–4当前 / ProcessStepItem / GuideStepItem（三角 clone，不是 `›`）/ NoticeItem。规格见 `docs/specs/07-stepper.md`。
+同法拆完的其余条（理赔这份）：TimelineItem / ProgressStepper 步骤1–4当前 / ProcessStepItem / GuideStepItem（三角 clone，不是 `›`）/ NoticeItem。规格见 `docs/specs/07-stepper.md`。自适应见 [adaptive-stepper.md](adaptive-stepper.md)。
