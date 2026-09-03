@@ -1,0 +1,4 @@
+{
+  "name": "理赔业务 Design System",
+  "install": "node --version && npm --version && git --version"
+}
